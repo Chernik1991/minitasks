@@ -1,7 +1,6 @@
 export type studentType = {
-    id: number,
-    name: string,
-    age: number
+    manufacturer: string,
+    model: string
 }
 type newComponentType = {
     task: Array<studentType>
@@ -13,8 +12,8 @@ export const NewComponent = (props:newComponentType) => {
             {props.task.map((m:studentType, index:number)=>{
                 return(
                     <tr key={index}>
-                        <td>{m.name}</td>
-                        <td>{m.age}</td>
+                        <td>{m.manufacturer}</td>
+                        <td>{m.model}</td>
                     </tr>)}
                 )
             }
