@@ -1,26 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {NewComponent} from "./site/NewComponent";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const tasks = [
+        {id: 1, name: "James", age: 8},
+        {id: 2, name: "Robert", age: 18},
+        ]
+    return (
+        <table>
+            <tr>
+                <td>Название</td>
+                <td>Стоимость</td>
+            </tr>
+            <tr>
+            <NewComponent task={tasks}/>
+            </tr>
+        </table>
+    )
+        ;
 }
 
 export default App;
