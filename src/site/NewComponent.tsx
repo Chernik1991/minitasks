@@ -1,3 +1,4 @@
+import React from 'react';
 export type studentType = {
     manufacturer: string,
     model: string
