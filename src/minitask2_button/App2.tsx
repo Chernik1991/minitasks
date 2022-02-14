@@ -1,26 +1,23 @@
 import React from 'react';
 import './App2.css';
+import {Button} from './components/Button';
 
 
 export function App2() {
-
-    // const myFirstSubscriber=()=>{
-    //     console.log('HelloWorld2')
-    // }
-    // const myFirstSubscriber2=()=>{
-    //     console.log('HelloWorld22')
-    // }
-
-    const onClicHandler=(name:string)=>{
-        console.log(name)
+    const Button1Foo=(subscriber:string, age:number)=>{
+console.log(subscriber,age)
     }
-
+    const Button2Foo=(subscriber:string,)=>{
+        console.log(subscriber)
+    }
+    const Button3Foo=()=>{
+        console.log("Im stupped Button")
+    }
     return (
-        <div className='App2'>
-            {/*/!*<button onClick={(event)=>{console.log('HelloWorld')}}>MyYouTubeChenel-1</button>*!/*/}
-            <button onClick={(event )=> onClicHandler('Ivan')} >MyYouTubeChenel-1</button>
-            <button onClick={(event )=> onClicHandler('Vasya')} >MyYouTubeChenel-2</button>
-
+        <div className={'App2'}>
+            <Button name={"MyYouTubeChenel-1"} callBack={()=>Button1Foo('Im Vasya',21)}/>
+            <Button name={"MyYouTubeChenel-2"} callBack={()=>Button2Foo('Im Ivan',)}/>
+            <Button name={"Stupped BUTTON"} callBack={Button3Foo}/>
         </div>
                 )
 }
